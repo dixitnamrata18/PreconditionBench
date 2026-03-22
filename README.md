@@ -1,10 +1,6 @@
 # PreconditionBench
 A diagnostic benchmark for unverified precondition failures in LLMs
 
-# PreconditionBench
-
-A diagnostic benchmark for unverified precondition failures in LLMs.
-
 ## What is this?
 
 Most LLM benchmarks test whether a model knows the right answer. 
