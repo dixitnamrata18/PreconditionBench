@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "slice": "single_step_implicit",
+    "scenario": "Car wash is 100 meters away. Should I walk or take the car?",
+    "unverified_precondition": "Car is required at the destination for washing — walking defeats the purpose",
+    "correct_behavior": "Flag that the car must be present at the car wash before recommending transport mode",
+    "correct_answer": "Take the car",
+    "failure_type": "ignored_dependency",
+    "difficulty": "medium"
+  },
+  {
+    "id": 2,
+    "slice": "single_step_implicit",
+    "scenario": "My phone battery is dead. Should I call someone?",
+    "unverified_precondition": "A dead phone cannot make calls — the action is impossible in current state",
+    "correct_behavior": "Flag that calling is not possible until the phone is charged",
+    "correct_answer": "Charge the phone first",
+    "failure_type": "missed_dependency",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "slice": "single_step_implicit",
+    "scenario": "I need to submit my documents for verification. Can I send a photo?",
+    "unverified_precondition": "Type of verification required is unknown — physical originals may be mandatory",
+    "correct_behavior": "Ask what type of submission is accepted before confirming photo is sufficient",
+    "correct_answer": "Verify submission requirements first",
+    "failure_type": "missed_dependency",
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "slice": "single_step_implicit",
+    "scenario": "My car needs fuel. The petrol pump is 200 meters away. How do I get there?",
+    "unverified_precondition": "Car cannot drive to the pump if it has no fuel — the vehicle needed to travel is the object needing repair",
+    "correct_behavior": "Flag the circular dependency — car cannot reach the pump under its own power",
+    "correct_answer": "Carry a fuel can, push the car, or call for roadside assistance",
+    "failure_type": "ignored_dependency",
+    "difficulty": "medium"
+  },
+  {
+    "id": 5,
+    "slice": "single_step_implicit",
+    "scenario": "My laptop is broken. The repair shop is nearby. Should I go?",
+    "unverified_precondition": "The broken laptop must be brought to the shop — going without it is pointless",
+    "correct_behavior": "Flag that the laptop must be taken along before confirming whether to go",
+    "correct_answer": "Yes, but take the laptop with you",
+    "failure_type": "missed_dependency",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "slice": "single_step_explicit",
+    "scenario": "I have a meeting at 3pm. Can I join online?",
+    "unverified_precondition": "Whether online attendance is permitted for this specific meeting is unknown",
+    "correct_behavior": "Ask whether the meeting allows online participation before confirming",
+    "correct_answer": "Verify if online attendance is permitted first",
+    "failure_type": "missed_dependency",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "slice": "single_step_implicit",
+    "scenario": "You have an online meeting in 5 minutes and your laptop is dead. What should you do?",
+    "unverified_precondition": "Available alternative devices are unknown — solution depends on what the user has access to",
+    "correct_behavior": "Ask about available alternatives (phone, tablet, another laptop) before recommending a fix",
+    "correct_answer": "Identify available alternative device and join from that",
+    "failure_type": "missed_dependency",
+    "difficulty": "hard"
+  },
+  {
+    "id": 8,
+    "slice": "single_step_implicit",
+    "scenario": "You're thirsty. Should you drink from your water bottle?",
+    "unverified_precondition": "Whether the bottle contains water is unknown",
+    "correct_behavior": "Flag that bottle contents must be verified before recommending drinking from it",
+    "correct_answer": "Check if bottle has water first",
+    "failure_type": "missed_dependency",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "slice": "single_step_explicit",
+    "scenario": "You need to send an urgent email. What should you do?",
+    "unverified_precondition": "Internet connectivity status is unknown — email requires network access",
+    "correct_behavior": "Flag connectivity as a precondition before recommending to open email client",
+    "correct_answer": "Verify internet access before attempting to send",
+    "failure_type": "missed_dependency",
+    "difficulty": "medium"
+  },
+  {
+    "id": 10,
+    "slice": "single_step_implicit",
+    "scenario": "Your car won't unlock. Should you press the remote again?",
+    "unverified_precondition": "Root cause of failure is unknown — repeating a failing action without diagnosis is invalid",
+    "correct_behavior": "Flag that the cause of failure must be identified before recommending repeated action",
+    "correct_answer": "Diagnose why it failed — key battery, signal, mechanical fault — before acting",
+    "failure_type": "ignored_dependency",
+    "difficulty": "medium"
+  },
+  {
+    "id": 11,
+    "slice": "single_step_explicit",
+    "scenario": "You want to cook dinner. Should you start?",
+    "unverified_precondition": "Availability of a working heat source and ingredients is unknown",
+    "correct_behavior": "Ask about available cooking resources before confirming",
+    "correct_answer": "Verify heat source and ingredients are available first",
+    "failure_type": "missed_dependency",
+    "difficulty": "medium"
+  },
+  {
+    "id": 12,
+    "slice": "single_step_explicit",
+    "scenario": "You want to go to the gym. Should you head out now?",
+    "unverified_precondition": "Required equipment (shoes, gym bag, membership) availability is unknown",
+    "correct_behavior": "Ask whether the user has what they need before confirming they should leave",
+    "correct_answer": "Verify required items are ready before heading out",
+    "failure_type": "missed_dependency",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "slice": "single_step_explicit",
+    "scenario": "You need cash. Should you go to the ATM?",
+    "unverified_precondition": "Whether the user has their ATM card is unknown",
+    "correct_behavior": "Ask if card is available before recommending going to ATM",
+    "correct_answer": "Confirm you have your card before going",
+    "failure_type": "missed_dependency",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "slice": "single_step_explicit",
+    "scenario": "You need to print a document urgently. Should you print now?",
+    "unverified_precondition": "Printer operational status (ink, paper, connectivity) is unknown",
+    "correct_behavior": "Flag printer readiness as a precondition before confirming",
+    "correct_answer": "Verify printer is operational before starting",
+    "failure_type": "missed_dependency",
+    "difficulty": "medium"
+  },
+  {
+    "id": 15,
+    "slice": "single_step_explicit",
+    "scenario": "You want to watch a movie on your streaming app. Should you open it?",
+    "unverified_precondition": "Subscription status and internet connectivity are unknown",
+    "correct_behavior": "Flag whether subscription is active and internet is available before confirming",
+    "correct_answer": "Verify active subscription and connectivity first",
+    "failure_type": "missed_dependency",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "slice": "single_step_implicit",
+    "scenario": "You need to travel somewhere urgently. Should you take your vehicle?",
+    "unverified_precondition": "Vehicle operational status (fuel, battery, mechanical condition) is unknown",
+    "correct_behavior": "Ask whether the vehicle is in working condition before recommending it",
+    "correct_answer": "Verify vehicle is operational before deciding",
+    "failure_type": "missed_dependency",
+    "difficulty": "hard"
+  },
+  {
+    "id": 17,
+    "slice": "single_step_implicit",
+    "scenario": "Please book the earliest available flight to Mumbai for me.",
+    "unverified_precondition": "Departure city, travel documents, payment details, passport, and booking access are all unknown",
+    "correct_behavior": "Flag all missing preconditions before attempting to proceed with booking",
+    "correct_answer": "Request departure city, travel documents, payment info, and confirm booking access before proceeding",
+    "failure_type": "missed_dependency",
+    "difficulty": "hard"
+  },
+  {
+    "id": 18,
+    "slice": "multi_step_chain",
+    "scenario": "I want to host a dinner party tonight. I've sent invites to 10 friends. What should I do next?",
+    "unverified_precondition": "RSVPs, kitchen availability, budget, and grocery supply are all unconfirmed — the entire planning chain depends on these",
+    "correct_behavior": "Flag upstream preconditions (confirmed attendance, working kitchen, budget) before recommending next steps in the chain",
+    "correct_answer": "Confirm RSVPs, kitchen readiness, and budget before planning menu or buying groceries",
+    "failure_type": "ignored_dependency",
+    "difficulty": "hard"
+  }
+]
