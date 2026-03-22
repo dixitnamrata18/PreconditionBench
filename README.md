@@ -74,9 +74,9 @@ what information you would need to answer correctly. Then respond."
 
 ## Links
 
-- Kaggle Benchmark: [PreconditionBench on Kaggle]
-- Dataset: [PreconditionBench Dataset on Kaggle]
-- Hackathon: [Measuring Progress Toward AGI - Cognitive Abilities]
+- Kaggle Benchmark: Coming public April 17, 2026
+- Dataset: [(https://www.kaggle.com/datasets/dixitnamrata18/preconditionbench-dataset)]
+- Hackathon: [https://www.kaggle.com/competitions/kaggle-measuring-agi]
 
 ## Citation
 
